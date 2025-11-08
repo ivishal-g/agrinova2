@@ -27,7 +27,7 @@ export function Navbar() {
               <Leaf className="w-5 h-5 text-white" />
             </div>
             <span className="bg-linear-to-r from-green-600 to-emerald-600 bg-clip-text text-transparent">
-              AgrINova
+              कृषीNOVA
             </span>
           </Link>
 

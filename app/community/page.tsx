@@ -18,7 +18,7 @@ export default function Community() {
       time: "2 hours ago",
       title: "Best practices for wheat cultivation",
       content:
-        "I've been using AgrINova for 6 months and the crop recommendations have increased my yield by 35%. Here are my top tips for wheat farming...",
+        "I've been using कृषीNOVA for 6 months and the crop recommendations have increased my yield by 35%. Here are my top tips for wheat farming...",
       likes: 234,
       comments: 45,
       shares: 12,

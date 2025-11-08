@@ -16,7 +16,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "AgrINova - Smart Farming Assistant",
+  title: "कृषीNOVA - Smart Farming Assistant",
   description: "AI-powered farming solution for climate-resilient agriculture",
 };
 

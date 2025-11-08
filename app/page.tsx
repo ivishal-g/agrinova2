@@ -166,7 +166,7 @@ export default function Home() {
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <h2 className="text-4xl font-bold text-slate-900 mb-16 text-center">
-            How AgrINova Works
+            How कृषीNOVA Works
           </h2>
 
           <div className="grid md:grid-cols-4 gap-8">
@@ -220,7 +220,7 @@ export default function Home() {
             Ready to Transform Your Farm?
           </h2>
           <p className="text-xl mb-8 opacity-90">
-            Join thousands of farmers already using AgrINova to increase yields and profitability
+            Join thousands of farmers already using कृषीNOVA to increase yields and profitability
           </p>
           <Link href="/crop-advisor">
             <Button
@@ -240,7 +240,7 @@ export default function Home() {
             <div>
               <h3 className="font-bold text-lg mb-4 flex items-center gap-2">
                 <Leaf className="w-5 h-5 text-green-500" />
-                AgrINova
+                कृषीNOVA
               </h3>
               <p className="text-slate-400 text-sm">
                 Smart farming for a sustainable future
@@ -273,7 +273,7 @@ export default function Home() {
           </div>
           <div className="border-t border-slate-800 pt-8">
             <p className="text-slate-400 text-center text-sm">
-              © 2024 AgrINova. Empowering Farmers, Enriching Futures.
+              © 2024 कृषीNOVA. Empowering Farmers, Enriching Futures.
             </p>
           </div>
         </div>
