@@ -8,8 +8,8 @@ import { useState } from "react";
 
 export default function Community() {
   const [searchQuery, setSearchQuery] = useState("");
-
-  const posts = [
+  const [postInput, setPostInput] = useState("");
+  const [posts, setPosts] = useState([
     {
       id: 1,
       author: "Raj Patel",
@@ -52,7 +52,28 @@ export default function Community() {
       shares: 5,
       tags: ["iot", "sensors", "monitoring"],
     },
-  ];
+  ]);
+
+  const handleAddPost = () => {
+    if (postInput.trim() === "") return;
+
+    const newPost = {
+      id: posts.length + 1,
+      author: "You",
+      avatar: "You",
+      location: "Your Location",
+      time: "just now",
+      title: postInput.split("\n")[0],
+      content: postInput,
+      likes: 0,
+      comments: 0,
+      shares: 0,
+      tags: [],
+    };
+
+    setPosts([newPost, ...posts]);
+    setPostInput("");
+  };
 
   const topContributors = [
     { name: "Raj Patel", posts: 45, followers: 1200, avatar: "RP" },
@@ -120,14 +141,21 @@ export default function Community() {
                   You
                 </div>
                 <div className="flex-1">
-                  <input
-                    type="text"
+                  <textarea
+                    value={postInput}
+                    onChange={(e) => setPostInput(e.target.value)}
                     placeholder="Share your farming experience..."
-                    className="w-full px-4 py-2 border border-slate-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500"
+                    className="w-full px-4 py-2 border border-slate-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500 resize-none"
+                    rows={3}
                   />
                   <div className="flex justify-end gap-2 mt-3">
-                    <Button variant="outline">Cancel</Button>
-                    <Button className="bg-linear-to-r from-green-600 to-emerald-600 hover:from-green-700 hover:to-emerald-700 text-white">
+                    <Button variant="outline" onClick={() => setPostInput("")}>
+                      Cancel
+                    </Button>
+                    <Button
+                      onClick={handleAddPost}
+                      className="bg-linear-to-r from-green-600 to-emerald-600 hover:from-green-700 hover:to-emerald-700 text-white"
+                    >
                       <Plus className="w-4 h-4 mr-2" />
                       Post
                     </Button>
